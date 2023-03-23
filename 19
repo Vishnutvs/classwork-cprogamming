@@ -1,0 +1,37 @@
+def binary_search(arr, x):
+    # Get the left and right boundaries of the array
+    left, right = 0, len(arr) - 1
+    
+    # Iterate while left boundary is less than or equal to right boundary
+    while left <= right:
+        # Get the middle index of the array
+        mid = (left + right) // 2
+        
+        # If the element is present at the middle itself
+        if arr[mid] == x:
+            return mid
+        
+        # If the element is smaller than mid, then it can only be present in left subarray
+        elif arr[mid] > x:
+            right = mid - 1
+        
+        # Else the element is in right subarray
+        else:
+            left = mid + 1
+    
+    # If the element is not present in the array
+    return -1
+
+# Sample input
+arr = [28, 12, 15, 122, 10, 33, 11]
+x = 15
+
+# Perform binary search
+result = binary_search(arr, x)
+
+# Check if the element is found or not and display the output
+if result != -1:
+    print(f"Given element {x} is found at {result+1}th position")
+else:
+    print("Element not found")
+Given element 15 is found at 3rd position
