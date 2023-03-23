@@ -1,0 +1,2 @@
+printf("%d%d%d%d%d%d",i++,i--,++i,--i,i);
+this condition operator has the error which doesnt allow the code to run.
