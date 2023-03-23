@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int num, i = 1, sum = 0;
+    printf("Enter a positive integer: ");
+    scanf("%d", &num);
+
+    while (i <= num) {
+        sum += i;
+        i++;
+    }
+
+    printf("Sum of first %d natural numbers = %d", num, sum);
+    return 0;
+}
+Enter a positive integer: 5
+Sum of first 5 natural numbers = 15
