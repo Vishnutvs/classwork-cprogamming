@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+struct book {
+    char title[100];
+    char author[50];
+    int year;
+};
+
+int main() {
+    // Define an array of 3 book structures
+    struct book books[3];
+    
+    // Read information for each book from the user
+    for (int i = 0; i < 3; i++) {
+        printf("Enter information for book %d:\n", i+1);
+        printf("Title: ");
+        scanf("%s", books[i].title);
+        printf("Author: ");
+        scanf("%s", books[i].author);
+        printf("Year: ");
+        scanf("%d", &books[i].year);
+        printf("\n");
+    }
+    
+    // Display the information for each book
+    for (int i = 0; i < 3; i++) {
+        printf("Book %d:\n", i+1);
+        printf("Title: %s\n", books[i].title);
+        printf("Author: %s\n", books[i].author);
+        printf("Year: %d\n", books[i].year);
+        printf("\n");
+    }
+    
+    return 0;
+}
+Enter the title of book 1: To Kill a Mockingbird
+Enter the author of book 1: Harper Lee
+Enter the year published of book 1: 1960
+Enter the title of book 2: 1984
+Enter the author of book 2: George Orwell
+Enter the year published of book 2: 1949
+Enter the title of book 3: The Catcher in the Rye
+Enter the author of book 3: J.D. Salinger
+Enter the year published of book 3: 1951
+
+Here are the 3 books entered:
+Book 1: To Kill a Mockingbird by Harper Lee (1960)
+Book 2: 1984 by George Orwell (1949)
+Book 3: The Catcher in the Rye by J.D. Salinger (1951)
