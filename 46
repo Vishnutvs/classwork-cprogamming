@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    const int a = 10; // constant variable
+
+    // pointer to the constant variable
+    const int *ptr = &a;
+
+    printf("Value of a: %d\n", a);
+
+    // modifying the constant variable using the pointer
+    *(int *)ptr = 20;
+
+    printf("Modified value of a: %d\n", a);
+
+    return 0;
+}
+Value of a: 10
+Modified value of a: 20
