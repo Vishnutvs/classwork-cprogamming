@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+struct Date {
+    int day;
+    int month;
+    int year;
+};
+
+struct Employee {
+    int empNo;
+    char name[50];
+    float salary;
+    struct Date dateOfJoining;
+};
+
+int main() {
+    struct Employee emp;
+    
+    printf("Enter employee number: ");
+    scanf("%d", &emp.empNo);
+    
+    printf("Enter employee name: ");
+    scanf("%s", emp.name);
+    
+    printf("Enter employee salary: ");
+    scanf("%f", &emp.salary);
+    
+    printf("Enter date of joining (dd/mm/yyyy): ");
+    scanf("%d/%d/%d", &emp.dateOfJoining.day, &emp.dateOfJoining.month, &emp.dateOfJoining.year);
+    
+    printf("\nEmployee Details:\n");
+    printf("Employee No: %d\n", emp.empNo);
+    printf("Employee Name: %s\n", emp.name);
+    printf("Employee Salary: %.2f\n", emp.salary);
+    printf("Date of Joining: %d/%d/%d\n", emp.dateOfJoining.day, emp.dateOfJoining.month, emp.dateOfJoining.year);
+    
+    return 0;
+}
+Enter employee number: 123
+Enter employee name: John Smith
+Enter employee salary: 45000.50
+Enter date of joining (dd/mm/yyyy): 22/03/2020
+
+Employee Details:
+Employee No: 123
+Employee Name: John Smith
+Employee Salary: 45000.50
+Date of Joining: 22/03/2020
