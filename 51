@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+// Define the inner structure
+struct Address {
+  char city[30];
+  char state[30];
+  int zip;
+};
+
+// Define the outer structure
+struct Person {
+  char name[30];
+  int age;
+  struct Address address;  // Nested structure
+};
+
+int main() {
+  // Create a person and set its values
+  struct Person person1 = {"John", 25, {"New York", "NY", 10001}};
+
+  // Access and print the person's values
+  printf("Name: %s\n", person1.name);
+  printf("Age: %d\n", person1.age);
+  printf("Address:\n");
+  printf("  City: %s\n", person1.address.city);
+  printf("  State: %s\n", person1.address.state);
+  printf("  Zip: %d\n", person1.address.zip);
+
+  return 0;
+}
+Name: John
+Age: 25
+Address:
+  City: New York
+  State: NY
+  Zip: 10001
