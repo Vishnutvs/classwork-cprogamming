@@ -1,0 +1,24 @@
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+n = int(input("Enter a number: "))
+
+primes = []
+num = 2
+
+while len(primes) < n:
+    if is_prime(num):
+        primes.append(num)
+    num += 1
+
+print("{}th prime number is {}".format(n, primes[-1]))
+
+print("{} prime numbers after {} are: {}".format(n, primes[-1], [x for x in range(primes[-1]+1, primes[-1]+n+1) if is_prime(x)]))
+Enter a number: 3
+3th prime number is 5
+3 prime numbers after 5 are: [7, 11, 13]
