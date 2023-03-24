@@ -1,0 +1,2 @@
+printf("\n%c%c%c%c",s[ i ],*(s+i),*(i+s),i[s]);
+this condition operator has the error which doesnt allow the code to run.
